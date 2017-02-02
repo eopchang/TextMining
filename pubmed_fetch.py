@@ -43,7 +43,7 @@ def fetch_details(id_list):
     return results
     
     
- #본 함수. term에 쿼리를 넣으면 됨. 현재는 제목만 출력하도록. Abstract 출력은 더 손봐야 함.    
+ #본 함수. term에 쿼리를 넣으면 됨. 현재는 제목만 출력하도록. Abstract 출력은 더 손봐야 함    
 def articles(term):   
     results = search(term)
     id_list = results['IdList']
