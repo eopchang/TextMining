@@ -108,10 +108,15 @@ def MeSH_terms_2(query):
     #각 item별로 Entry terms 제시됨. 
     
     #쿼리의 subject heading을 취함.
-    sub_heading = search_results['QueryTranslation'].split("[MeSH")[0].split('"')[1] 
-    sub_heading = sub_heading.lower()
-
-    terms_phenotypes = [query.lower(), sub_heading] #query와 query의 MeSH term을 리스트에 추가
+    if len(search_results['TranslationSet']) > 0: #보통은 검색어와 subject heading이 불일치하여 전환됨. 
+        sub_heading = search_results['QueryTranslation'].split("[MeSH")[0].split('"')[1] 
+        sub_heading = sub_heading.lower()
+        terms_phenotypes = [query.lower(), sub_heading]#query와 query의 MeSH term을 리스트에 추가
+    else: #검색 쿼리가 정확히 subject heading인 경우
+        sub_heading = query.lower()
+        terms_phenotypes = [sub_heading]
+        #query가 곧 MeSH term이므로 이를 리스트에 추가
+     
     
     #MeSH term(subject heading의 entry terms 추가하기)
     handle = Entrez.efetch(db="MeSH", retmode='xml',id =  search_results['IdList'])# 일단 검색된 item들 다 모으고
@@ -119,7 +124,7 @@ def MeSH_terms_2(query):
     Item = Item.lower() #소문자로 변환.
     
     try:
-        entryterms = Item.split(": " + sub_heading)[1].split("entry terms:\n")[1].split("\n\n")[0]
+        entryterms = Item.split(": " + sub_heading + '\n')[1].split("entry terms:\n")[1].split("\n\n")[0]
     except IndexError:
         return []
     
