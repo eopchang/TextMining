@@ -111,7 +111,7 @@ for I, J in enumerate(D_info['disease_name']):
         print('\r',"Total counts of articles with","'",J,"'",'and its entry terms:',total_counts)
         
         #질병 관련 총 문서중 몇프로가 해당 본초 관련된것인지. (%)
-        if total_counts == 0: #검색어에 대한 subject heading이 없는 경우 terms_phenotype이 공리스트가 되고, total counts=0될수 있음.
+        if total_counts == 0: #terms_phenotype이 공리스트로 반환된 경우, total counts=0될수 있음.
             fraction = '-' 
             print('\n','fraction: ', fraction)
             Result.ix[J,:] = [total_counts, N_title, N_abstract,
