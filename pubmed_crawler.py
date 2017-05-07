@@ -129,8 +129,12 @@ def MeSH_terms_2(query):
     
     try:
         entryterms = Item.split(": " + sub_heading + '\n')[1].split("entry terms:\n")[1].split("\n\n")[0]
+        #query에 대한 search results가 없는데 subject heading 찾는 과정에서 
+        #부분 term(띄어쓰기 포함 term에서 일부분)으로 엉뚱하게 translaton되어 그걸
+        #subject heading으로 잡고 여기까지 왔다면, search results의 IDList가 비어있으므로
+        #handle도 비고, Itemㄷ 비어서 여기서 에러나게되어있음. 
     except IndexError:
-        return []
+        return [query.lower()]
     
     entryterms = entryterms.split("\n")
     entryterms = [space_remover(term) for term in entryterms] #텀마다 앞에 공백 4칸
