@@ -90,3 +90,38 @@ def MeSH_terms(query):
         
         terms_phenotypes.extend(EnryTermsforEachItem)
     return list(set(terms_phenotypes)) #중복 있는 경우 제거.
+    
+
+
+
+
+def MeSH_terms_2(query):
+    
+    """MeSH_term와 달리 search results 중 제일 상단, 첫번째 item만의 entry term을 수집
+    """
+
+    Entrez.email = 'eopchang@gmail.com'
+    
+    handle = Entrez.esearch(db="MeSH", term= query)
+    search_results = Entrez.read(handle) #query에 대한 search results로 items의 정보들. (id 갯수가 검색결과수)
+    #검색결과에 query와 동일한 term이 있을수도 있고 없을수도 있음.
+    #각 item별로 Entry terms 제시됨. 
+    
+    #쿼리의 subject heading을 취함.
+    sub_heading = search_results['QueryTranslation'].split("[MeSH")[0].split('"')[1] 
+    sub_heading = sub_heading.lower()
+
+    terms_phenotypes = [query, sub_heading] #query와 query의 MeSH term을 리스트에 추가
+    
+    #MeSH term(subject heading의 entry terms 추가하기)
+    handle = Entrez.efetch(db="MeSH", retmode='xml',id =  search_results['IdList'])# 일단 검색된 item들 다 모으고
+    Item = handle.read() 
+    Item = Item.lower() #소문자로 변환.
+    
+    entryterms = Item.split(": " + sub_heading)[1].split("entry terms:\n")[1].split("\n\n")[0]
+    
+    entryterms = entryterms.split("\n")
+    entryterms = [space_remover(term) for term in entryterms] #텀마다 앞에 공백 4칸
+     
+    terms_phenotypes.extend(entryterms)
+    return terms_phenotypes 

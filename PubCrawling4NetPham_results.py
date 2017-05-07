@@ -6,6 +6,9 @@ Created on Thu May  4 00:52:50 2017
 @author: Chang-Eop
 """
 
+import os
+os.chdir('/Users/Chang-Eop/Desktop/GitHub/TextMining')
+
 import pubmed_crawler as pc
 
 #펍메드에서 검색할 본초
@@ -13,11 +16,11 @@ term_herb = 'ginseng'
 pheno_query = 'acute migraine'
 
 results = pc.search(term_herb)
-id_list = pc.results['IdList']
+id_list = results['IdList']
 papers = pc.fetch_details(id_list)
 
 #본초로 검색돈 문서들의 제목, 초록에서 검색할 질병.  (경로 등의 표현형도 괜찮은지 아직 확인 X)
-terms_phenotypes = pc.MeSH_terms(pheno_query) #MeSH entry terms 리스트 구성
+terms_phenotypes = pc.MeSH_terms_2(pheno_query) #MeSH entry terms 리스트 구성
 
 #terms_phenotypes 등장한 title, abstract 갯수 초기값.
 N_title = 0
@@ -72,7 +75,7 @@ for i, q in enumerate(terms_phenotypes):
     total_ids.extend(id_list_2)
 
 total_counts = len(list(set(total_ids)))
-print(total_counts)
+print('\r',"Total counts of articles with","'",pheno_query,"'",'and its entry terms:',total_counts)
 
 #질병 관련 총 문서중 몇프로가 해당 본초 관련된것인지. (%)
 print(N_abstract/total_counts*100, "%")
