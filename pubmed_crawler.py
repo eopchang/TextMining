@@ -120,7 +120,11 @@ def MeSH_terms_2(query):
     
     #MeSH term(subject heading의 entry terms 추가하기)
     handle = Entrez.efetch(db="MeSH", retmode='xml',id =  search_results['IdList'])# 일단 검색된 item들 다 모으고
-    Item = handle.read() 
+    try:
+        Item = handle.read() 
+    except UnicodeDecodeError: #알수 없는 디코딩 에러가 발생하는 경우가 있음. 
+        return [] #일단 공리스트 반환하는걸로 처리. 나중에 이런 에러 몇개나 나는지 일괄확인 필요.
+    
     Item = Item.lower() #소문자로 변환.
     
     try:
