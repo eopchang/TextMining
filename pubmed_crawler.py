@@ -111,14 +111,17 @@ def MeSH_terms_2(query):
     sub_heading = search_results['QueryTranslation'].split("[MeSH")[0].split('"')[1] 
     sub_heading = sub_heading.lower()
 
-    terms_phenotypes = [query, sub_heading] #query와 query의 MeSH term을 리스트에 추가
+    terms_phenotypes = [query.lower(), sub_heading] #query와 query의 MeSH term을 리스트에 추가
     
     #MeSH term(subject heading의 entry terms 추가하기)
     handle = Entrez.efetch(db="MeSH", retmode='xml',id =  search_results['IdList'])# 일단 검색된 item들 다 모으고
     Item = handle.read() 
     Item = Item.lower() #소문자로 변환.
     
-    entryterms = Item.split(": " + sub_heading)[1].split("entry terms:\n")[1].split("\n\n")[0]
+    try:
+        entryterms = Item.split(": " + sub_heading)[1].split("entry terms:\n")[1].split("\n\n")[0]
+    except IndexError:
+        return []
     
     entryterms = entryterms.split("\n")
     entryterms = [space_remover(term) for term in entryterms] #텀마다 앞에 공백 4칸
