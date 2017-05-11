@@ -31,7 +31,7 @@ id_lists = list(set(id_lists)) #중복 제거
     
     
 ###시간 오래 걸림
-papers = pc.fetch_details(id_lists)
+papers = pc.fetch_details(id_lists, 500) # 청크 사이즈(몇개 아이디 포함할지) 입력. chunk  단위로 나누어 fetching.
 ###
 
 #++++++++++++++++++++++++++++++++++++++++++
@@ -58,7 +58,7 @@ for I, J in enumerate(D_info['disease_name']):
         print('\t',i+1, ' of ', len(id_lists))
         
         try:
-            article = papers['PubmedArticle'][i]['MedlineCitation']['Article']
+            article = papers[i]['MedlineCitation']['Article']
         except IndexError:
             IDsNotFound.append(j)
                 
