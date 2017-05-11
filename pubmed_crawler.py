@@ -12,34 +12,51 @@ from Bio import Entrez
 
 def search(query):
     Entrez.email = 'eopchang@gmail.com'
-    
-    #먼저 검색되는 총 문서 수 total_counts 구함.
-    handle4counts = Entrez.esearch(db='pubmed', 
-                            sort='relevance', 
-                            retmax= '1',
-                            retmode='xml',
-                            term=query)
-    total_counts = Entrez.read(handle4counts)['Count']
-    
-    #구해진 total_counts 정보 이용하여 한번에 다 추출(너무 많으면 에러 날수도???)
+
     handle = Entrez.esearch(db='pubmed', 
                             sort='relevance', 
-                            retmax= total_counts,#str(no_max),
+                            retmax= '10000000',#str(no_max),
                             retmode='xml', 
                             term=query)
                             
     results = Entrez.read(handle)
     return results
     
+
+
     
+def fetch_details(id_list, size):
+    '''
+    size만큼의 chunk로 나누어 fetch하고 결과를 합침. 
+    결과는 efetch로 얻은 handle을 read한 후
+    'PubmedArticle' key의 value(list 구조)임
+    '''
+    import numpy as np
     
-def fetch_details(id_list):
-    ids = ','.join(id_list)
     Entrez.email = 'eopchang@gmail.com'
-    handle = Entrez.efetch(db='pubmed',
+    n_id = len(id_list)
+    n_groups = int(np.ceil(n_id/size))
+    id_list_new =  np.zeros((n_groups,size), dtype = int)
+    for i in range(n_groups):
+        for j in range(size):
+            try: #마지막 행(그룹)은 pop할 남은 ID 없어 에러 발생 가능.
+                id_list_new[i,j] = id_list.pop(0)
+            except IndexError: 
+                pass
+                
+    results = []        
+    for i in range(n_groups):
+        chunk = id_list_new[i,:]
+        chunk = list(chunk[chunk > 0]) # 마지막 그룹은 ID자리에 0 이 있을수 있으므로.
+        chunk = str(chunk)[1:-1] 
+                    
+        handle = Entrez.efetch(db='pubmed',
                            retmode='xml',
-                           id=ids)
-    results = Entrez.read(handle)
+                           id=chunk)
+        res = Entrez.read(handle)
+        res_articles = res['PubmedArticle']
+        results.extend(res_articles)
+        
     return results
     
 
