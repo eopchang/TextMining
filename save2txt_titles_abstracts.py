@@ -17,19 +17,30 @@ no_papers = len(results_2)
 
 f = codecs.open('pain_papers.txt','w',"utf-8")
 
+count_abstract = 0
+count_date = 0
+
 for i in range(no_papers):
     print(i+1, " of", no_papers)
     f.write('\n\n\n\n')
     
     data_0 = results_2[i]
-    data_1 = data_0['MedlineCitation']
-    data_2 = data_1['Article']
-    Title = data_2['ArticleTitle']
-    f.write(Title[:])
-    f.write('\n\n')
-
-    if 'Abstract' in list(data_2.keys()):
-        Abstract = data_2['Abstract']['AbstractText'][0]   
+    data_M1 = data_0['MedlineCitation'] #제목, 초록 데이터는 MedlineCitation을 참고해야 함
+    data_M2 = data_M1['Article']
+    
+    
+    data_P1 = data_0['PubmedData'] #article date 데이터를 누락 없이 확인하기 위해서는 pubmedData를 참고해야 함
+    data_P2 = data_P1['History']
+    data_P3 = data_P2[1]
+    
+    #초록이 없는 논문은 제외. 어차피 제목이 아닌 초록을 검색할 것이므로, 제목 자리에 출판연도 기재
+    if 'Abstract' in list(data_M2.keys()):
+        Title = data_M2['ArticleTitle']
+        Abstract = data_M2['Abstract']['AbstractText'][0]   
+        Date = data_P3['Year']
+        
+        f.write(Date)
+        f.write('\n')
         f.write(Abstract[:])
         
     else:
@@ -39,3 +50,6 @@ f.close()
         
              
 
+
+        
+    
