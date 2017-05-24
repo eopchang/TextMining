@@ -6,8 +6,7 @@ Created on Sat May 20 14:08:33 2017
 @author: Chang-Eop
 
 pubmed_fething_chunk.py의 fecting 결과인 
-results_2:'Bio.Entrez.Parser.DictionaryElement'들의 list)를 txt파일로 저장
-title과 abstract로 저장되며 띄어쓰는 줄 수로 구분됨. 
+results_2:'Bio.Entrez.Parser.DictionaryElement'들의 list)중 출판연도와 abstract를 txt파일로 저장
 """
 
 
