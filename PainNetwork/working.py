@@ -99,6 +99,7 @@ for candi in candi_total:
     for t in range(len(terms)):
         if candi[0].lower() in terms[t]: #동의어 목록에 있으면 
             query = terms[t] #동의어 리스트를 쿼리로
+            break #찾아으면 다음 루프로
         else: #동의어 목록에 없으면 
             query = [candi[0].lower()] #그냥 그 자체만 리스트 형태로
     
@@ -120,6 +121,7 @@ for candi in candi_total:
                     if not (pattern_1.search(test_phrase)) and not (pattern_2.search(test_phrase)):
                         # 앞뒤로 알파벳 있지 않은 경우만 카운트
                         counts += 1
+                        print(text)
                         break #하나라도 찾아서 카운트했으면 다음 텍스트로 넘어감
        
                 
@@ -139,7 +141,7 @@ f2.close()
          
 
         
-        
+ #이하 작업중 시험 코드       
  
 
 
@@ -171,5 +173,25 @@ for i in texts:
 
 
 
+results_2[0].keys()
+results_2[0]['MedlineCitation']['Article']['Abstract']
+
+
+
+
+
 data_2[data_2['Preferred Label'] == 'hypophysis']['Synonyms']
 #data_2.to_excel('neural_nodes_candidates.xlsx')
+
+
+
+
+flag = 0
+for i, j  in enumerate(texts):
+    print(i, len(texts))
+    if text in j:
+        flag = 1
+        print(1000000000)
+        
+    
+    
