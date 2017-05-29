@@ -1,149 +1,122 @@
-Brain,3441
 Limbic lobe,0
-Cuneus,3
-Cingulate gyrus,23
-Posterior cingulate gyrus,1
-Anterior cingulate gyrus,15
-Middle cingulate gyrus,0
-Functional area,0
-Sensorimotor cortex,33
-Forebrain,103
-Telencephalon,11
-Cerebral Cortex,73
-Temporal lobe,37
-Inferior temporal gyrus,1
+Cuneus,6
+Cingulate gyrus,42
+Posterior cingulate gyrus,3
+Anterior cingulate gyrus,23
+Middle cingulate gyrus,1
+Functional area,1
+Sensorimotor cortex,50
+Forebrain,128
+Telencephalon,17
+Cerebral Cortex,133
+Temporal lobe,43
+Inferior temporal gyrus,4
 Medial inferior temporal cortex,0
-Frontal lobe,17
-Upper brain stem,1
-Superior temporal gyrus,3
-Parietal lobe,14
-Prefrontal cortex,256
-Lateral prefrontal cortex,10
-Ventrolateral prefrontal cortex,11
-Substantia nigra,31
-Occipital lobe,5
-Medial frontal cortex,12
-Medial frontal gyrus,1
-Hindbrain,16
-Midbrain,174
+Frontal lobe,25
+Upper brain stem,4
+Superior temporal gyrus,6
+Parietal lobe,22
+Prefrontal cortex,363
+Lateral prefrontal cortex,18
+Ventrolateral prefrontal cortex,12
+Substantia nigra,45
+Occipital lobe,8
+Medial frontal cortex,14
+Medial frontal gyrus,3
+Hindbrain,17
+Midbrain,226
 Metencephalon,0
-Cerebellum,66
-Diencephalon,12
-Thalamus,421
-Basal Ganglia,49
-Amygdala,268
-Striatum,70
-Putamen,24
-Caudate nucleus,25
-Hippocampus,153
-Hippocampal formation,11
+Cerebellum,140
+Diencephalon,19
+Thalamus,738
+Basal Ganglia,73
+Amygdala,396
+Striatum,116
+Putamen,68
+Caudate nucleus,35
+Hippocampus,251
+Hippocampal formation,14
 Archicortex,0
-Brodmann area,6
+Brodmann area,11
 Brodmann area 7,0
 Brodmann area 9,0
-Brodmann area 10,0
+Brodmann area 10,1
 Brodmann area 11,0
 Brodmann area 17,0
 Brodmann area 18,0
 Brodmann area 24,0
-Brodmann area 32,1
+Brodmann area 32,2
 Brodmann area 33,0
-Orbital gyri,0
-Medial orbital gyrus,0
-Medial prefrontal cortex,58
-Lower brain stem,4
-Lateral temporal cortex,0
+Orbital gyri,1
+Medial orbital gyrus,1
+Medial prefrontal cortex,83
+Lower brain stem,5
+Lateral temporal cortex,1
 Lateral orbital gyrus,0
-Dorsal striatum,7
-Middle temporal gyrus,0
+Dorsal striatum,8
+Middle temporal gyrus,3
 Lateral occipito-temporal gyrus,0
-Fusiform gyrus,3
+Fusiform gyrus,9
 Medial occipito-temporal gyrus,0
-Lingual gyrus,0
-Parahippocampal gyrus,5
-Entorhinal cortex,5
-Insula,217
-Precentral gyrus,9
-Inferior frontal gyrus,11
-Superior frontal gyrus,4
-Raphe nuclei,11
-Medulla oblongata,17
+Lingual gyrus,2
+Parahippocampal gyrus,14
+Entorhinal cortex,6
+Insula,419
+Precentral gyrus,11
+Inferior frontal gyrus,24
+Superior frontal gyrus,11
+Raphe nuclei,24
+Medulla oblongata,32
 Raphe nuclei of medulla,0
-Cerebral peduncle,2
+Cerebral peduncle,4
 Midbrain tegmentum,2
-Midbrain reticular formation,9
-Pons,36
+Midbrain reticular formation,10
+Pons,67
 Pontine tegmentum,5
-Pontine reticular formation,8
-Brain stem,126
-Dorsolateral prefrontal cortex,65
- prefrontal cortex,0
- anterior cingulate gyrus,0
-Posterior insula,41
-Anterior insula,74
- amygdala,0
-Visual area,1
+Pontine reticular formation,12
+Brain stem,176
+Dorsolateral prefrontal cortex,94
+Posterior insula,81
+Anterior insula,136
+Visual area,2
 Visual area V5,0
-Supplementary motor area,19
-Corpus Callosum,3
-Cerebrospinal fluid,533
- hippocampus,0
- cerebellum,0
- thalamus,0
-Globus pallidus,5
- globus pallidus,0
- putamen,0
- caudate nucleus,0
- insula,0
- posterior temporal lobe,0
+Supplementary motor area,54
+Corpus Callosum,7
+Cerebrospinal fluid,588
+Globus pallidus,15
+posterior temporal lobe,0
 Limbic gyrus,0
 Middle and inferior temporal gyri,0
- middle and inferior temporal gyrus,0
- superior temporal gyrus,0
- parahippocampal gyrus,0
- fusiform gyrus,0
-Ventral striatum,11
+Middle and inferior temporal gyrus,0
+Ventral striatum,24
 Anterior temporal lobe,0
- lateral anterior temporal lobe,0
- mesial anterior temporal lobe,0
+Lateral anterior temporal lobe,0
+Mesial anterior temporal lobe,0
 Brodmann area 8,0
- precentral gyrus,0
-" superior frontal gyrus, dorsolateral",0
-Middle frontal gyrus,8
-Angular gyrus,0
-Hypothalamus,186
+"Superior frontal gyrus, dorsolateral",0
+Middle frontal gyrus,15
+Angular gyrus,3
+Hypothalamus,321
 Transverse temporal gyri,0
- inferior temporal gyrus,0
-Temporal pole,2
+Temporal pole,6
 Gyrus rectus,0
- gyrus rectus,0
- middle cingulate,0
-Sulcus,50
+Middle cingulate,11
+Sulcus,73
 Calcarine sulcus,0
- calcarine sulcus,0
- cuneus,0
- lingual gyrus,0
-Superior parietal lobule,1
+Superior parietal lobule,5
 Uncus,0
-Postcentral gyrus,6
-Precuneus,13
+Postcentral gyrus,22
+Precuneus,31
 Superior occipital,0
 Middle occipital,2
 Inferior occipital,1
-Claustrum,4
-Supramarginal gyrus,1
-Inferior parietal lobule,11
- postcentral gyrus,0
- superior parietal lobule,0
- inferior parietal lobule,0
- supramarginal gyrus,0
- angular gyrus,0
- precuneus,0
-Paracentral lobule,0
- supplementary motor area,0
-Dentate gyrus,17
-Amygdala and Hippocampus,3
-Lentiform nucleus,3
+Claustrum,6
+Supramarginal gyrus,5
+Inferior parietal lobule,25
+Paracentral lobule,5
+Dentate gyrus,21
+Amygdala and Hippocampus,4
+Lentiform nucleus,7
 Posterior medial prefrontal cortex,0
 Brodmann areas 9/10,0
 Caudal anterior cingulate gyrus,0
@@ -151,65 +124,61 @@ Rostral anterior cingulate gyrus,0
 Brodmann areas 17/18,0
 Ambiens gyrus,0
 Subsplenial gyrus,0
-Perirhinal cortex,1
+Perirhinal cortex,2
 Ectorhinal cortex,0
 Hippocampal region,1
-Motor cortex,248
-Primary motor cortex,54
+Motor cortex,321
+Primary motor cortex,75
 Nonprimary motor area,0
-Premotor cortex,9
-Medial temporal lobe,4
-White matter,70
+Premotor cortex,25
+Medial temporal lobe,5
+White matter,85
 Lateral premotor cortex,0
 Medial premotor,1
 Broca's area,0
 Wernicke's area,0
 Language area,0
 Anterior thalamic nucleus,0
-Reticular thalamic nucleus,2
+Reticular thalamic nucleus,6
 Ventroanterior thalamic nucleus,0
 Ventrolateral thalamic nucleus,1
 Laterodorsal thalamic nucleus,0
-Mediodorsal thalamic nucleus,0
+Mediodorsal thalamic nucleus,3
 Ventral posterior medial thalamic nucleus,0
 Centromedian thalamic nucleus,0
 Ventrolateral posterior thalamic nucleus,0
-Paraventricular thalamic nucleus,1
+Paraventricular thalamic nucleus,4
 Lateral posterior thalamic nucleus,0
-Pulvinar,12
+Pulvinar,18
 Lateral geniculate thalamic nucleus,0
 Medial geniculate thalamic nucleus,0
 Lateral nuclear group,0
-Lateral globus pallidus,0
-Medial globus pallidus,0
+Lateral globus pallidus,1
+Medial globus pallidus,2
 Metathalamus,0
 Midline thalamic nuclear group,0
 Ventral thalamic nuclei,1
-Nucleus accumbens,96
-Nucleus ruber,0
+Nucleus accumbens,136
+Nucleus ruber,1
 Nucleus subthalamic,0
 Nucleus dentate,0
 Subthalamus,0
- lateral temporal cortex,0
- medial temporal lobe,0
-Colliculi,2
-Superior colliculus,11
-Inferior colliculus,5
-Tectum,5
-Hypophysis,6
+Colliculi,4
+Superior colliculus,22
+Inferior colliculus,13
+Tectum,8
+Hypophysis,8
 Subgenual area,0
 Planum polare,0
 Planum temporale,0
 Anterior transverse temporal gyrus,0
 Posterior transverse temporal gyrus,0
- transverse temporal gyri,0
- middle temporal gyrus,0
-Superior temporal pole,0
- middle temporal pole,0
+Superior temporal pole,1
+middle temporal pole,0
 Subcallosal area,0
-Periaqueductal grey,86
+Periaqueductal grey,120
 Mamillary bodies,0
-Posterior hypothalamus,9
+Posterior hypothalamus,12
 CA1 field,0
 Anteromedial thalamic nucleus,0
 Medial caudatus,0
@@ -217,35 +186,27 @@ Tail of caudate nucleus,0
 Medial occipital,0
 Striate cortex,1
 Ventral anterior cingulate,1
-Dorsal anterior cingulate,21
+Dorsal anterior cingulate,26
 Medial orbital area,0
 Lateral orbital area,0
- anterior parietal lobe,0
- posterior parietal lobe,0
-Middle temporal pole,0
- hypothalamus,0
-Vermis,5
- inferior frontal gyrus,0
- middle frontal gyrus,0
- superior frontal gyrus,0
- anterior insula,0
- posterior insula,0
- cingulate gyrus,0
-Intraparietal sulcus,0
+Anterior parietal lobe,1
+Posterior parietal lobe,0
+Vermis,13
+Intraparietal sulcus,5
 Retrospenial cortex,0
 Primary visual cortex,2
-Parieto-occipital sulcus,0
-Primary sensorimotor cortex,9
+Parieto-occipital sulcus,1
+Primary sensorimotor cortex,14
 Prefrontal cortex and anterior cingulate,3
-Brodmann area 1,0
+Brodmann area 1,1
 Brodmann area 44,0
 Brodmann area 45,0
 Brodmann area 46,0
 Brodmann area 47,0
 "Medial prefrontal cortex and anterior cingulate
     cortex",0
-Brodmann area 2,0
-Brodmann area 3,0
+Brodmann area 2,1
+Brodmann area 3,2
 Brodmann area 4,0
 Brodmann area 5,0
 Brodmann area 6,1
@@ -273,18 +234,18 @@ Brodmann area 40,0
 Brodmann area 41,0
 Brodmann area 42,0
 Brodmann area 43,0
-Motor area,25
+Motor area,63
 Auditory area,0
-Primary auditory cortex,1
+Primary auditory cortex,2
 Secondary auditory cortex,0
-Somatosensory area,27
-Primary sensory cortex,12
-Secondary sensory cortex,3
+Somatosensory area,36
+Primary sensory cortex,15
+Secondary sensory cortex,4
 Brodmann area 6m,0
 Brodmann area 28a,0
 Brodmann area 28b,0
-Corpus Striatum,2
-Cingulate motor area,0
+Corpus Striatum,4
+Cingulate motor area,3
 Caudal cingulate motor area,0
 Rostral cingulate motor area,0
 "Caudal cingulate motor area, dorsal bank",0
@@ -292,14 +253,14 @@ Rostral cingulate motor area,0
 Basolateral nuclear group,0
 Corticomedial amygdaloid area,0
 Central nuclear group,0
-Central amygdaloid nucleus,4
+Central amygdaloid nucleus,8
 Intercalate mass,0
 Basal amygdaloid nucleus,0
 "Basal amygdaloid nucleus, magnocellular part",0
 Lateral amygdaloid nucleus,0
 Anterior amygdaloid area,0
 Suprageniculate nucleus,1
-Anterior pulvinar nucleus,1
+Anterior pulvinar nucleus,2
 Medial pulvinar nucleus,0
 "Lateral amygdaloid nucleus, ventral part",0
 "Lateral amygdaloid nucleus, dorsal intermediate division",0
@@ -307,53 +268,53 @@ Olfactory field of entorhinal cortex,0
 Rostral field of entorhinal cortex,0
 Epithalamus,0
 Pineal body,2
-Pre-supplementary motor area,2
+Pre-supplementary motor area,5
 Intermediate field of entorhinal cortex,0
-Dorsal premotor cortex,0
+Dorsal premotor cortex,1
 Rostral dorsal premotor,0
 Caudal dorsal premotor,0
-Ventral premotor,2
-F1,35
-F2,46
-F3,2
-F4,2
-F5,1
-F6,0
+Ventral premotor,4
+F1,77
+F2,65
+F3,19
+F4,19
+F5,3
+F6,3
 F7,0
 Matelli-Luppino-Rizzolatti frontal area,0
 "Ventral posterior lateral nucleus, caudal part",0
- retrosplenial cortex,0
+retrosplenial cortex,10
 Anterodorsal thalamic nucleus,0
 Anteroventral thalamic nucleus,0
 Medial nuclear thalamic group,0
-Ventroposterior nuclei,0
-Ventroposterolateral thalamic nucleus,3
+Ventroposterior nuclei,2
+Ventroposterolateral thalamic nucleus,5
 Supplementary eye field,0
-Reticular formation,75
-Substantia nigra pars compacta,3
-Substantia nigra pars reticulata,1
-Parabrachial nucleus,23
-Ventral tegmental area,27
+Reticular formation,98
+Substantia nigra pars compacta,4
+Substantia nigra pars reticulata,2
+Parabrachial nucleus,38
+Ventral tegmental area,40
 Olivary body,0
-Area postrema,4
+Area postrema,9
 Cranial nerve nucleus,0
 Medulla oblongata cranial nerve nuclei,0
-Solitary nucleus,0
-Hypoglossal nucleus,0
+Solitary nucleus,1
+Hypoglossal nucleus,1
 Dorsal motor nucleus of vagus nerve,0
 Nucleus ambiguus,2
 Midbrain cranial nerve nucleus,0
-Edinger-Westphal nucleus,7
+Edinger-Westphal nucleus,8
 Trochlear nucleus,0
 Pontine cranial nerve nucleus,0
 Trigeminal motor nucleus,1
 Abducens nucleus,0
-Facial nucleus,0
-Vestibular nucleus,1
-Spinal trigeminal nucleus,49
-Locus coeruleus,91
-Medullary reticular formation,11
-Paragigantocellular nucleus,0
+Facial nucleus,1
+Vestibular nucleus,4
+Spinal trigeminal nucleus,70
+Locus coeruleus,134
+Medullary reticular formation,14
+Paragigantocellular nucleus,3
 Oral pontine reticular nucleus,0
 Caudal pontine reticular nucleus,0
 Frontal eye field,0
@@ -366,12 +327,11 @@ Visual area V6,0
 Periamygdaloid cortex,0
 Brodmann areas 12/47,0
 Subicular complex,0
-Subiculum,0
+Subiculum,2
 Presubiculum,1
 Parasubiculum,0
 Brodmann area 49,0
 Ventrolateral oral thalamic nucleus,0
- primary auditory cortex,0
 Brodmann area 24a,0
 Brodmann area 24b,0
 Brodmann area 24c,0
@@ -526,7 +486,7 @@ Brodmann area 7a,0
 Brodmann area 7b,0
 Economo-Koskinas area TF,0
 Area TEO,0
-Piriform cortex,1
+Piriform cortex,5
 Brodmann area 3a,0
 Brodmann area 3b,0
 Temporal operculum,0
@@ -578,36 +538,33 @@ Ventrolateral anterior thalamic nucleus,0
 Area X,1
 Brodmann area 6Va,0
 Caudal field of enthorinal cortex,0
-Cerebellar cortex,4
-Cerebral white matter,2
+Cerebellar cortex,10
+Cerebral white matter,3
 Cerebrallar white matter,0
-Ventricular system,3
+Ventricular system,8
 Lateral ventrical,0
 Inferior lateral ventricle,0
-Third ventricle,22
-Fourth ventricle,3
-Operculum,30
-Frontal operculum,6
+Third ventricle,28
+Fourth ventricle,9
+Operculum,53
+Frontal operculum,10
 Opercular part of inferior frontal gyrus,0
 Rolandic operculum,0
- operculum,0
 Area triangularis,0
 Orbital part of inferior frontal gyrus,0
 Lateral surface of frontal lobe,0
-"Superior frontal gyrus, dorsolateral",0
 Orbital surface of frontal lobe,0
 Olfactory cortex,0
 "Superior frontal gyrus, orbital part",0
-" superior frontal gyrus, orbital part",0
 "Superior frontal gyrus, medial orbital part",0
 "Middle frontal gyrus, lateral part",0
 "Middle frontal gyrus, orbital part",0
-" superior frontal gyrus, medial part",0
+"superior frontal gyrus, medial part",0
 Anterior lobe of cerebellum,0
 Posterior lobe of cerebellum,0
 Lobus flocculonodularis,0
-Cerebellar nucleus,0
-Cerebellar hemisphere,2
+Cerebellar nucleus,1
+Cerebellar hemisphere,4
 Hemisphere of anterior lobe,0
 Hemisphere of posterior lobe,0
 Vermis of anterior lobe,0
@@ -629,14 +586,11 @@ Lobule VIIB of cerebellar hemisphere,0
 Lobule VIII of cerebellar hemisphere,0
 Lobule IX of cerebellar hemisphere,0
 Lobule X of cerebellar hemisphere (flocculus),0
-Parietal operculum,20
+Parietal operculum,36
 Rostral premotor,0
 Caudal premotor,0
 "Supplementary motor area proper and pre-supplementary motor
     area",0
- orbitofrontal cortex,0
+Orbitofrontal cortex,60
 Middle and inferior frontal gyri,0
- sensorimotor area,0
- lentiform nucleus,0
- entorhinal cortex,0
- cerebellar cortex,0
+sensorimotor area,4
