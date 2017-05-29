@@ -13,9 +13,13 @@ os.chdir('/Users/Chang-Eop/Desktop/GitHub/TextMining/PainNetwork')
 
 
 import numpy as np
+import matplotlib.pyplot as plt
 import pandas as pd
 import codecs
 import csv
+import re
+
+
 
 
 data = pd.read_excel('NIFSTD.xlsx')
@@ -81,10 +85,16 @@ for i,line in enumerate(texts):
 
 
 
+#candidate terms의 동의어들로 쿼리 구성하고, 문서 전체에서의 등장 빈도 카운트
 freq_of_candis = {}
+
+n = 0
 for candi in candi_total:
     counts = 0
+    n += 1
     
+    #단어 앞뒤 공백 제거
+    candi = [candi[0].strip()]
     #동의어 포함한 쿼리 구성
     for t in range(len(terms)):
         if candi[0].lower() in terms[t]: #동의어 목록에 있으면 
@@ -95,15 +105,29 @@ for candi in candi_total:
     #전체 텍스트에서 쿼리(동의어 포함) 등장 빈도 카운트(문서당 최대 1회 카운트)
     for qs in query:
         for i, text in enumerate(texts):
-            if " "+qs+" " in text: #해당 단어 앞뒤로 한칸씩 떨어져있을때만 카운트
-                counts += 1
-
-            
+            if qs in text: #해당 용어 발견했을때
+                
+                pattern_0 = re.compile(qs) #용어 존재    
+                pattern_1 = re.compile('[a-z]'+qs)#용어 앞에 다른 문자 연결되어있거나
+                pattern_2 = re.compile(qs+'[a-z]')#용어 뒤에 다른 문자 연결된 경우라면
+                
+                iters = pattern_0.finditer(text) #용어 존재하는 경우를  iterable 객체로 반환
+                
+                for it in iters: #용어 존재 경우 하나씩 돌아가면서
+                    start = it.span()[0] #텍스트 상에서의 시작위치
+                    end = it.span()[1] #텍스트 상에서의 용어 종료 위치
+                    test_phrase = text[start-1:end+1] #용어 앞뒤로 한칸 추가하여 따냄
+                    if not (pattern_1.search(test_phrase)) and not (pattern_2.search(test_phrase)):
+                        # 앞뒤로 알파벳 있지 않은 경우만 카운트
+                        counts += 1
+                        break #하나라도 찾아서 카운트했으면 다음 텍스트로 넘어감
+       
                 
     freq_of_candis[candi[0]] = counts
-    print(counts)
+    print(counts, ", ", n, " of ", len(candi_total))
         
 
+#결과 csv 포맷으로 저장
 f2 = open('FreqCandis_ROI_Brede.csv', 'w')
 w = csv.writer(f2)
 for row in freq_of_candis.items():
@@ -112,7 +136,6 @@ f2.close()
 
 
 
- 
          
 
         
@@ -124,8 +147,8 @@ f2.close()
 
     
     
-    
-            
+pattern = re.compile('[a-z]')
+pattern.se            
 
             
     
@@ -133,9 +156,14 @@ f2.close()
 
         
         
-  
+for i in texts:
+    print(i, len(texts))
+    if i == '\n':
+        texts.remove(i)
         
-
+for i in texts:
+    if 'after 2 h the animals were perfused. paraffin embedded brain sections immunoreacted with an antibody selective for' in i:
+        break
 
 
 
