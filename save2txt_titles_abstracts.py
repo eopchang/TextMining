@@ -35,12 +35,18 @@ for i in range(no_papers):
     #초록이 없는 논문은 제외. 어차피 제목이 아닌 초록을 검색할 것이므로, 제목 자리에 출판연도 기재
     if 'Abstract' in list(data_M2.keys()):
         Title = data_M2['ArticleTitle']
-        Abstract = data_M2['Abstract']['AbstractText'][0]   
+        Abstract = data_M2['Abstract']['AbstractText']
         Date = data_P3['Year']
         
         f.write(Date)
         f.write('\n')
-        f.write(Abstract[:])
+        
+        if len(Abstract) == 1:
+            f.write(Abstract[0])
+        else:
+            for i in range(len(Abstract)):
+                f.write(Abstract[i])
+            
         
     else:
         print('!!!!!!!!!!!!!!!!!! no ABSTACT!!!!!!!!!') #초록 없는 경우
