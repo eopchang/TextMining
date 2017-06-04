@@ -190,6 +190,9 @@ text_lists.append(text_list) #맨 마지막은 따로 추가해야 함
 text_lists.remove([]) #제일 첫 엘리먼트가 공리스트라 제거.
 
                  
+                 
+                 
+                 
 t_start = time.time()  
 #occur_matrix 생성
 #abstract별로 np.array (row: abstracts, col: year, freq. of nodes) 생성
@@ -245,25 +248,83 @@ print(t_end - t_start)
                     
                 
 
-      
-                 
-                 
+#>>> (t_end - t_start)/3600   
+#9.949767874413066  
+ 
+#year에 따라 sorting                
+occur_matrix  = occur_matrix[np.argsort(occur_matrix[:,0])]                 
+          
+#연도별 총 초록 수
+y_min = int(min(occur_matrix[:,0]))
+y_max = int(max(occur_matrix[:,0]))
+y_hist = np.zeros((y_max - y_min +1, 1))
+for y_i, y in enumerate(range(y_min, y_max+1)):
+    y_hist[y_i] = sum(occur_matrix[:,0] == y)
+
+#첫번째 칼럼에 연도 배치    
+y_hist = np.array([np.arange(y_min, y_max+1), y_hist[:,0]]).T
+
+plt.figure()
+plt.plot(y_hist[:,0], y_hist[:,1])
+
+#y_hist_2: 최초-1975년까지 초록수 합하여 1975년으로 할당
+y_hist_2 = y_hist[y_hist[:,0] == 1975]
+y_hist_2[:,1] = np.sum(y_hist[y_hist[:,0] < 1976,1])
+y_hist_2 = np.concatenate((y_hist_2,y_hist[y_hist[:,0] > 1975]))
+
+#occur_matrix_2: 최초 - 1975년 초록까지 모두 1975년으로 처리
+occur_matrix_2 = occur_matrix[:]
+occur_matrix_2[occur_matrix_2[:,0] < 1976,0] = 1975
+
+plt.figure()
+plt.plot(y_hist_2[:,0], y_hist_2[:,1])
+
+
+#
+rel_freq = np.zeros((len(y_hist_2), len(nodes)))
+for y_i, y in enumerate(range(int(y_hist_2[0,0]), int(y_hist_2[-1,0]))):
+    print(y_i, y)
+    freq_sum_year = occur_matrix[occur_matrix[:,0] == y].sum(axis = 0)/y_hist_2[y_i,1]
+    freq_sum_year = freq_sum_year[1:]
+    rel_freq[y_i,:] = freq_sum_year
+
+
+plt.figure()
+plt.matshow(rel_freq[:,:])
+plt.yticks(range(len(y_hist_2)), y_hist_2[:,0].astype(int), Fontsize = 6)
+plt.xticks(range(len(nodes.Node)),nodes.Node, rotation = 90, Fontsize = 6)
+
+
+    
+#occur_matrix_3: 노드 포함 안하는 초록 제거, 연도 제거
+occur_matrix_3 = occur_matrix_2[np.sum(occur_matrix_2[:,1:], axis = 1) > 0,1:]
+    
+#전체 초록에 대한 co-occurence matrix  만들기
+corr_total = np.dot(occur_matrix_3.T, occur_matrix_3)
+
+plt.figure()
+plt.matshow(corr_total)
+plt.yticks(range(len(nodes.Node)),nodes.Node, Fontsize = 6)
+plt.xticks(range(len(nodes.Node)),nodes.Node, rotation = 90, Fontsize = 6)
+
             
-
-
-
-
-
+#연도별로 co-occurence matrix 구성(row, col: node 수, depth: 연도 수)
+corr_years = np.zeros((corr_total.shape[0], corr_total.shape[1],len(y_hist_2)))
+for y_i, y in enumerate(y_hist_2[:,0]):
+    occur_matrix_4 = occur_matrix_2[occur_matrix_2[:,0] == y,1:]
+    corr_years[:,:,y_i] = np.dot(occur_matrix_4.T, occur_matrix_4)
     
-
     
+#관심 연도(year of interest) 설정하여 co-occurence matrix 그리기
+yoi = 1998
+yoi_i = np.where(y_hist_2[:,0] == yoi)[0][0]
 
-            
-    
+plt.figure()
+plt.matshow(corr_years[:,:,yoi_i])
+plt.title(yoi)
+plt.yticks(range(len(nodes.Node)),nodes.Node, Fontsize = 6)
+plt.xticks(range(len(nodes.Node)),nodes.Node, rotation = 90, Fontsize = 6)
     
 
         
         
-
-    
-    
